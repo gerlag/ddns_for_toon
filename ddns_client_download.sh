@@ -12,7 +12,7 @@
 # line 5: external port (default 443)
 # ###################################
 # Online install: 
-# wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh install
+# wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh dds_client_download.sh install
 # or download ddns_client_download.sh manually  upload to Toon /root/ with winscp and execute sh /root/ddns_client_download.sh install
 conffile="/root/.ddns_client.sh/ddns_client.conf"
 conffile_acme="/root/.acme.sh/account.conf"
