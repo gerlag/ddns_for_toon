@@ -42,7 +42,9 @@ This is router-specific. Below an example op the Ziggo router
  
 4.1 install online by excecuting 
 	wget -O dds_client_download.sh http://glasje.nl/ddns_client_download.sh && sh dds_client_download.sh
+
 or 
+
 4.2 install manually by uploading ddn_client_download.sh to /root/ en executing 
 	sh /root/ddn_client_download.sh install
 	
