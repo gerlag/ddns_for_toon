@@ -36,7 +36,7 @@ mkdir -p /root/.ddns_client.sh
 SCRIPT=$(readlink -f "$0")
 echo $SCRIPT
 
-if [ $SCRIPT = "/root/dds_client_download.sh" ]; then
+if [ $SCRIPT = "/root/ddns_client_download.sh" ]; then
 	mv /root/ddns_client_download.sh /root/.ddns_client.sh/ddns_client.sh
 	chmod a+x /root/.ddns_client.sh/ddns_client.sh
 fi 
@@ -794,4 +794,5 @@ fi
 	echo " "`date` >> ddns_status.txt
 	echo ddns result: $(cat ddns_status.txt)
 exit 0 
+
 
