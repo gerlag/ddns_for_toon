@@ -43,17 +43,16 @@ b) Ga in het linkermenu naar beveiliging -> Poort-forwarding en klik op "Voeg ni
 	
 4) Install ddn_client.sh 
  
-4.1 install online by excecuting 
-	wget -O dds_client_download.sh http://glasje.nl/ddns_client_download.sh && sh dds_client_download.sh
+ install online by excecuting 
+	wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh ddns_client_download.sh install
 or 
 
-curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
+    curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
 
-or
 
-4.3 install manually by uploading ddn_client_download.sh to /root/ en executing 
+  install manually by uploading ddn_client_download.sh to /root/ en executing 
 	sh /root/ddn_client_download.sh install
 	
 
 After installation the exact url of your Toon will be given in the terminal. 
-This url can be used as wel from your LAN as externally. 
+This url can be used as wel from your LAN as externally.
