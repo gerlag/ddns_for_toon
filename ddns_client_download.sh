@@ -729,7 +729,7 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		rm -r acme_temp/	
 		echo Instalation completed
 		credents=$(cat $authfile_lighttpd) 
-		CYAN='\036[0;31m' 
+		CYAN='\033[0;36m' 
 		NC='\033[0m' # No Color
 		echo -e Acces of your rooted toon:${CYAN} https://$credents@$domain$external_port/mobile ${NC}
 		echo Enjoy! 
@@ -798,3 +798,4 @@ fi
 	echo " "`date` >> ddns_status.txt
 	echo ddns result: $(cat ddns_status.txt)
 exit 0 
+
