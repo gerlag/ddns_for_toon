@@ -1,5 +1,5 @@
 # ddns_for_toon
-ddn_client.sh
+ddns_client.sh
 
 This script will install a dyndns client for dynu.com and it installs also acme for installing and updating letsencrypt SSL certifcates.  
 
@@ -43,15 +43,18 @@ b) Ga in het linkermenu naar beveiliging -> Poort-forwarding en klik op "Voeg ni
 	
 4) Install ddn_client.sh 
  
- install online by excecuting 
-	wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh ddns_client_download.sh install
+install online by excecuting in terminal (e.q. putty) 
+ 
+wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh ddns_client_download.sh install
+
 or 
 
-    curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
+curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
 
 
-  install manually by uploading ddn_client_download.sh to /root/ en executing 
-	sh /root/ddn_client_download.sh install
+install manually by uploading ddn_client_download.sh to /root/ en executing in terminal
+	
+sh /root/ddn_client_download.sh install
 	
 
 After installation the exact url of your Toon will be given in the terminal. 
