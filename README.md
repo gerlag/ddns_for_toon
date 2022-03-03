@@ -62,4 +62,4 @@ After installation the exact url of your Toon will be given in the terminal.
 This url can be used as wel from your LAN as externally.
 
 Note: uninstall all by excecuting:
-'sh ddns_client.sh uninstall`
+`sh ddns_client.sh uninstall`
