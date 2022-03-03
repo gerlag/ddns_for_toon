@@ -504,7 +504,7 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		echo uninstall, removing cron job and acme.sh. That\'s all I will do. 
 		( crontab -l | grep -v -F "$croncmd" ) | crontab -
 		( crontab -l | grep -v -F "$croncmd_at_boot" ) | crontab -
-		.acme.sh/acme.sh --uninstall 
+		/root/.acme.sh/acme.sh --uninstall
 		echo you can manually close port 443 in firewall, but it doesný hurt to let it open.
 		echo you can manually revert lighttp.conf from $BACKUPOFINITIALFOUNDFILE but it doesný hurt to let it as is.
 		echo Restarting lighttpd 
