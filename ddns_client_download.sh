@@ -12,8 +12,6 @@
 # line 5: external port (default 443)
 # ###################################
 # Online install: 
-# wget -O dds_client_download.sh http://glasje.nl/ddns_client_download.sh && sh dds_client_download.sh install
-# or
 # wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh ddns_client_download.sh install
 # or 
 # curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
@@ -796,4 +794,3 @@ fi
 	echo " "`date` >> ddns_status.txt
 	echo ddns result: $(cat ddns_status.txt)
 exit 0 
-
