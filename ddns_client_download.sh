@@ -499,7 +499,21 @@ ERROR=$( cat /tmp/wget_err_stdout )
 
 # check for argument, if this is install, then add credentails, add cron and job, try to install wget with https and create lighttpd.conf with ssl enabled and external authorisation. 
 if [ $# -eq 1 ];  then # argu,mrt suplied
-	if [ "$1"  == "install" ] || [ "$1"  == "reload" ]; then
+	if [ "$1"  == "uninstall" ]; then
+		echo Uninstall catched 
+		echo uninstall, removing cron job and acme.sh. That\'s all I will do. 
+		( crontab -l | grep -v -F "$croncmd" ) | crontab -
+		( crontab -l | grep -v -F "$croncmd_at_boot" ) | crontab -
+		.acme.sh/acme.sh --uninstall 
+		echo you can manually close port 443 in firewall, but it doesný hurt to let it open.
+		echo you can manually revert lighttp.conf from $BACKUPOFINITIALFOUNDFILE but it doesný hurt to let it as is.
+		echo Restarting lighttpd 
+		kill $(pidof lighttpd) # this is very Toon specific I assume... 
+		sleep 5 
+		echo dynu ddns uninstalled
+		exit 0 
+		
+	elif [ "$1"  == "install" ] || [ "$1"  == "reload" ]; then
 		echo install or reload catched  
 		echo installing ddns client or reloading configuration. 
 		echo Remark: You can uninstall this script by using \"uninstall\" as argument   
@@ -725,19 +739,7 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		# ####################################
 		# need for uninstalling?  
 		# ####################################
-	elif [ "$1"  == "uninstall" ]; then
-		echo Uninstall catched 
-		echo uninstall, removing cron job and acme.sh. That\'s all I will do. 
-		( crontab -l | grep -v -F "$croncmd" ) | crontab -
-		( crontab -l | grep -v -F "$croncmd_at_boot" ) | crontab -
-		acme.sh --uninstall 
-		echo you can manually close port 443 in firewall, but it doesný hurt to let it open.
-		echo you can manually revert lighttp.conf from $BACKUPOFINITIALFOUNDFILE but it doesný hurt to let it as is.
-		echo Restarting lighttpd 
-		kill $(pidof lighttpd) # this is very Toon specific I assume... 
-		sleep 5 
-		echo dynu ddns uninstalled
-		exit 0 
+
 			
 	else
 		# ####################################
