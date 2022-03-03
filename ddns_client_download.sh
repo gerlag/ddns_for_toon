@@ -504,7 +504,7 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		echo uninstall, removing cron job and acme.sh. That\'s all I will do. 
 		( crontab -l | grep -v -F "$croncmd" ) | crontab -
 		( crontab -l | grep -v -F "$croncmd_at_boot" ) | crontab -
-		/root/.acme.sh/acme.sh --uninstall
+		/root/.acme.sh/acme.sh --uninstall 
 		echo you can manually close port 443 in firewall, but it doesný hurt to let it open.
 		echo you can manually revert lighttp.conf from $BACKUPOFINITIALFOUNDFILE but it doesný hurt to let it as is.
 		echo Restarting lighttpd 
@@ -729,7 +729,9 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		rm -r acme_temp/	
 		echo Instalation completed
 		credents=$(cat $authfile_lighttpd) 
-		echo Acces of your rooted toon: https://$credents@$domain$external_port/mobile 
+		CYAN='\036[0;31m' 
+		NC='\033[0m' # No Color
+		echo -e Acces of your rooted toon:${CYAN} https://$credents@$domain$external_port/mobile ${NC}
 		echo Enjoy! 
 		# ####################################
 		# END installing  
@@ -796,5 +798,3 @@ fi
 	echo " "`date` >> ddns_status.txt
 	echo ddns result: $(cat ddns_status.txt)
 exit 0 
-
-
