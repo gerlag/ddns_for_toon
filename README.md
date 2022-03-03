@@ -55,7 +55,7 @@ or
 
 Install manually by uploading `ddns_client_download.sh` to `/root/` en execute in terminal: 
 	
-`sh /root/ddn_client_download.sh install`
+`sh /root/ddns_client_download.sh install`
 	
 
 After installation the exact url of your Toon will be given in the terminal. 
