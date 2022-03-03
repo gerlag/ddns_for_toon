@@ -14,9 +14,11 @@
 # Online install: 
 # wget -O dds_client_download.sh http://glasje.nl/ddns_client_download.sh && sh dds_client_download.sh install
 # or
-# wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh dds_client_download.sh install
+# wget -O dds_client_download.sh https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh && sh ddns_client_download.sh install
 # or 
-# or download ddns_client_download.sh manually  upload to Toon /root/ with winscp and execute sh /root/ddns_client_download.sh install
+# curl https://raw.githubusercontent.com/gerlag/ddns_for_toon/main/ddns_client_download.sh -O && sh ddns_client_download.sh install
+# or 
+# download ddns_client_download.sh manually, upload to Toon /root/ e.g. with winscp and execute in terminal sh /root/ddns_client_download.sh install
 conffile="/root/.ddns_client.sh/ddns_client.conf"
 conffile_acme="/root/.acme.sh/account.conf"
 authfile_lighttpd="/HCBv2/etc/lighttpd/lighttpd.user"
@@ -625,7 +627,7 @@ if [ $# -eq 1 ];  then # argu,mrt suplied
 		# ####################################
 		# Alter some wrong texts of mobile web
 		# ####################################
-		echo Alter some wrong texts of mobile web
+		echo Alter some wrong texts of mobile web page
 		update_mobile_web
 				
 		# ####################################
