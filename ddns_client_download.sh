@@ -778,9 +778,9 @@ fi
 token=$(echo -n $password  | md5sum | awk '{print $1}')
 
 if [ "$https" = '1' ]; then 
-	wget --no-check-certificate -qO ddns_status.txt  "https://api.dynu.com/nic/update?hostname=$domain\&username=$user\&password=$token" > /dev/null 2>&1
+	wget --no-check-certificate -qO ddns_status.txt  "https://api.dynu.com/nic/update?hostname=$domain&password=$token" > /dev/null 2>&1
 else 
-	wget -qO ddns_status.txt  "http://api.dynu.com/nic/update?hostname=$domain\&username=$user\&password=$token" > /dev/null 2>&1
+	wget -qO ddns_status.txt  "http://api.dynu.com/nic/update?hostname=$domain&password=$token" > /dev/null 2>&1
 fi
  result=$?
  echo UpdateResult: $result
