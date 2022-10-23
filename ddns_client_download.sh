@@ -23,7 +23,9 @@ authfile_lighttpd="/HCBv2/etc/lighttpd/lighttpd.user"
 croncmd="/root/ddns_client.sh  > /dev/null 2>&1"
 cronjob="*/59 * * * * $croncmd" # at every 59th minute
 croncmd_at_boot="/root/ddns_client.sh reload  > /dev/null 2>&1"
-cronjob_at_boot="@reboot sleep 5 && $croncmd_at_boot"
+# cronjob_at_boot="@reboot sleep 5 && $croncmd_at_boot"
+cronjob_at_boot="0 22 * * * sleep 5 && $croncmd_at_boot"
+
 
 
 echo SSL enabled ddns dynu.com client for rooted TOON ONLY.
