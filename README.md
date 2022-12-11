@@ -29,19 +29,26 @@ These valus must be entered during the installation of ddns_client.sh in step 4)
 3) Create a port forwarding rule on your router. 
 This is router-specific. Below an example op the Ziggo router. 
 
-3.1) Example Ziggo
+	3.1) Example Ziggo
 
-a) Ga in het linkermenu naar geavanceerde instellingen -> DHCP -> verbonde apparaten selecteer je Toon, meestal zichtbaar als ENECO 001-#####. Dan in het menu 'Voeg IP-adres reservering toe' en klik op de knop eronder op 'Voeg reservering toe' Noteer het IP-adres (192.168.178.###) 
+	a) Ga in het linkermenu naar geavanceerde instellingen -> DHCP -> verbonde apparaten selecteer je Toon, meestal zichtbaar als ENECO 001-#####. Dan in het menu 'Voeg IP-adres reservering toe' en klik op de knop eronder op 'Voeg reservering toe' Noteer het IP-adres (192.168.178.###) 
  
-b) Ga in het linkermenu naar beveiliging -> Poort-forwarding en klik op "Voeg nieuwe regel toe"
-	Vul in: 
-	Lokaal IP 192.168.178.### ( voor ### neem je hetzelfde getal als onder 1 genoteerd)
-	Lokale beginpoort:  443
-	Lokale eindpoort:  443
-	Externe beginpoort:  8443
-	Externe eindpoort:  8443
-	Protocol:  TCP
-	Ingeschakeld:  Actief
+	b) Ga in het linkermenu naar beveiliging -> Poort-forwarding en klik op "Voeg nieuwe regel toe"
+		Vul in: 
+		- Lokaal IP 192.168.178.### ( voor ### neem je hetzelfde getal als onder 1 genoteerd)
+		
+		- Lokale beginpoort:  443
+		
+		- Lokale eindpoort:  443
+		
+		- Externe beginpoort:  8443
+		
+		- Externe eindpoort:  8443
+		
+		- Protocol:  TCP
+		
+		- Ingeschakeld:  Actief
+		
 	
 4) Install ddns_client.sh 
  
